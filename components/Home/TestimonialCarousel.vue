@@ -1,11 +1,11 @@
 <template>
   <div class="relative w-full max-w-4xl mx-auto overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
     <!-- Carousel Heading -->
-    <h2 class="text-3xl font-bold text-center mb-4">Client Testimonials</h2>
-    <p class="text-lg text-gray-600 text-center mb-8">WHAT PEOPLE SAY ABOUT US.</p>
+    <h2 v-scroll class="text-3xl font-bold text-center mb-4">Client Testimonials</h2>
+    <p v-scroll class="text-lg text-gray-600 text-center mb-8">WHAT PEOPLE SAY ABOUT US.</p>
 
     <!-- Carousel Content -->
-    <div class="flex transition-transform duration-300 ease-in-out" :style="`transform: translateX(-${currentIndex * 100}%);`">
+    <div v-scroll class="flex transition-transform duration-300 ease-in-out" :style="`transform: translateX(-${currentIndex * 100}%);`">
       <div v-for="(testimonial, index) in testimonials" :key="index" class="min-w-full p-4">
         <div class="bg-white shadow-lg rounded-lg p-6">
           <p class="text-center flex justify-center"><UserCircleIcon class="h-16 text-black" /></p>

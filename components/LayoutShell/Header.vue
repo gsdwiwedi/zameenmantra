@@ -18,14 +18,14 @@
               </TransitionChild>
               <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                 <div class="flex-shrink-0 flex items-center px-4">
-                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-900-text.svg" alt="Workflow" />
+                  <img class="h-8 w-auto" src="public/logo.png" alt="Workflow" />
                 </div>
                 <nav aria-label="Sidebar" class="mt-5">
                   <div class="px-2 space-y-1">
-                    <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center px-2 py-2 text-base font-medium rounded-md']">
+                    <NuxtLink v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center px-2 py-2 text-base font-medium rounded-md']">
                       <component :is="item.icon" :class="[item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500', 'mr-4 h-6 w-6']" aria-hidden="true" />
                       {{ item.name }}
-                    </a>
+                    </NuxtLink>
                   </div>
                 </nav>
               </div>
@@ -60,11 +60,11 @@
     <div
       :class="[
         'container mx-8 justify-between items-center lg:flex hidden transition-all duration-300 ease-in-out',
-        isScrolled ? 'bg-white py-4' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white py-4' : 'bg-transparent py-2'
       ]"
       class=""
     >
-      <div class="text-lg font-semibold">Dream Property</div>
+      <div class=""><NuxtLink to="/"><img class="w-20" src="public/logo.png" alt="Workflow" /></NuxtLink></div>
       <ul class="flex-col md:flex-row md:flex space-y-4 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
         <li><NuxtLink to="/" class="text-gray-700 hover:text-blue-500">Home</NuxtLink></li>
         <li><NuxtLink to="/properties" class="text-gray-700 hover:text-blue-500">Properties</NuxtLink></li>
@@ -72,7 +72,7 @@
         <li><NuxtLink to="/career" class="text-gray-700 hover:text-blue-500">Career</NuxtLink></li>
         <li><NuxtLink to="/contact-us" class="text-gray-700 hover:text-blue-500">Contact Us</NuxtLink></li>
         <li><NuxtLink to="/aml-listing" class="text-gray-700 hover:text-blue-500"><UserCircleIcon class="h-6" /></NuxtLink></li>
-        <li><NuxtLink to="/buy-sell-rent" class="text-white bg-indigo-500 hover:bg-indigo-700 py-2 px-3 rounded-sm">Add Listing</NuxtLink></li>
+        <li><NuxtLink to="/property-submit-form" class="text-white bg-indigo-700 hover:bg-indigo-800 py-2 px-3 rounded-sm">Add Listing</NuxtLink></li>
       </ul>
     </div>
 
@@ -114,7 +114,7 @@
     { name: 'About', href: '#', icon: UserGroupIcon, current: false },
     { name: 'Career', href: '#', icon: MagnifyingGlassCircleIcon, current: false },
     { name: 'Contact Us', href: '#', icon: MagnifyingGlassCircleIcon, current: false },
-    { name: 'Add Listing', href: '#', icon: MapIcon, current: false },
+    { name: 'Add Listing', href: '/property-submit-form', icon: MapIcon, current: false },
   ]
   
   

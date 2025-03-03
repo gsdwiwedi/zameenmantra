@@ -1,8 +1,8 @@
 <template>
   <div class="p-8">
     <div class="mb-6 text-center">
-      <h1 class="text-3xl font-bold">Our Best Deals</h1>
-      <p>Check out some of the latest and best properties published on our website.</p>
+      <h1 v-scroll class="text-3xl font-bold">Our Best Deals</h1>
+      <p v-scroll>Check out some of the latest and best properties published on our website.</p>
     </div>
 
     <!-- Carousel Container -->
@@ -17,6 +17,7 @@
           :key="index"
           class="p-4"
           :style="`flex: 0 0 ${100 / cardsPerRow}%;`"
+          v-scroll
         >
           <div class="bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Card Image -->
@@ -57,37 +58,37 @@ const cards = [
   {
     title: "Independent House/Villa",
     description: "Builder Floor Greater Kailash-2",
-    price: "<12.00.00,000",
+    price: "$12.00.00,000",
     image: "/p1.jpeg",
   },
   {
     title: "Builder Floor Greater Kailash-1",
     description: "Sale in Greater ...",
-    price: "<16.00.00,000",
+    price: "$16.00.00,000",
     image: "/p1.jpeg",
   },
   {
     title: "Newly designed Second Floor",
     description: "Brand new interior, luxurious builder floor available",
-    price: "<32.00.00,000",
+    price: "$32.00.00,000",
     image: "/p1.jpeg",
   },
   {
     title: "Luxurious Villa",
     description: "Prime location, modern amenities",
-    price: "<40.00.00,000",
+    price: "$40.00.00,000",
     image: "/p1.jpeg",
   },
   {
     title: "Spacious Apartment",
     description: "City center, 3 BHK",
-    price: "<25.00.00,000",
+    price: "$25.00.00,000",
     image: "/p1.jpeg",
   },
   {
     title: "Eco-Friendly Home",
     description: "Green building, solar powered",
-    price: "<30.00.00,000",
+    price: "$30.00.00,000",
     image: "/p1.jpeg",
   },
 ];

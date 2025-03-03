@@ -1,19 +1,19 @@
 <template>
-     <div class=" bg-gray-200 py-12 px-4 sm:px-6 lg:px-8">
+     <div class=" bg-[#1a1007] py-12 px-4 sm:px-6 lg:px-8">
     <!-- Who We Are Section -->
     <section class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-gray-900 mb-4">Who We Are</h2>
-      <p class="text-lg text-gray-800 max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold text-white mb-4" v-scroll>Who We Are</h2>
+      <p v-scroll class="text-lg text-white max-w-2xl mx-auto">
         We are a dedicated team helping you find the perfect property for your needs.
       </p>
     </section>
 
     <!-- Our Services Section -->
     <section class="mb-6">
-      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">OUR SERVICES</h2>
+      <h2 v-scroll class="text-3xl font-bold text-white text-center mb-8">OUR SERVICES</h2>
       <div class="flex gap-6 justify-center">
         <!-- Purchase Property Card -->
-        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <div v-scroll class="bg-white shadow-lg rounded-lg p-6 text-center">
           <h3 class="text-2xl font-bold text-gray-900 mb-4">Purchase Property</h3>
           <p class="text-gray-600 mb-4">
             The best time to buy a home is always five years ago.
@@ -23,7 +23,7 @@
           </p>
         </div>
         <!-- Add more service cards here if needed -->
-          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div v-scroll class="bg-white shadow-lg rounded-lg p-6 text-center">
           <h3 class="text-2xl font-bold text-gray-900 mb-4">Purchase Property</h3>
           <p class="text-gray-600 mb-4">
             The best time to buy a home is always five years ago.
@@ -37,7 +37,5 @@
   </div>
 </template>
 <script setup lang="ts">
-  import {
-    HomeIcon
-  } from '@heroicons/vue/24/outline'
+
 </script>
