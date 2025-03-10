@@ -20,9 +20,9 @@
   <script setup>
   
       const  properties = [
-          { id: 1, type: 'Builder Floor', location: 'Gulmohar Park', description: 'Development...', price: '¥ 11,00,00,000' },
-          { id: 2, type: 'Builder Floor', location: 'Safdarjung', description: 'Development...', price: '¥ 11,00,00,000' },
-          { id: 3, type: 'Builder Floor', location: 'Safdarjung', description: 'Development...', price: '¥ 15,00,00,000' }
+          { id: 1, type: 'Builder Floor', location: 'Gulmohar Park', description: 'Development...', price: '$ 11,00,00,000' },
+          { id: 2, type: 'Builder Floor', location: 'Safdarjung', description: 'Development...', price: '$ 11,00,00,000' },
+          { id: 3, type: 'Builder Floor', location: 'Safdarjung', description: 'Development...', price: '$ 15,00,00,000' }
         ]
       
   </script>

@@ -11,9 +11,9 @@
     <!-- Our Services Section -->
     <section class="mb-6">
       <h2 v-scroll class="text-3xl font-bold text-white text-center mb-8">OUR SERVICES</h2>
-      <div class="flex gap-6 justify-center">
+      <div class="sm:flex gap-6 justify-center">
         <!-- Purchase Property Card -->
-        <div v-scroll class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <div v-scroll class="my-4 sm:my-0 bg-white shadow-lg rounded-lg p-6 text-center">
           <h3 class="text-2xl font-bold text-gray-900 mb-4">Purchase Property</h3>
           <p class="text-gray-600 mb-4">
             The best time to buy a home is always five years ago.

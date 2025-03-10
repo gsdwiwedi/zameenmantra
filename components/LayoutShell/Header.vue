@@ -33,12 +33,11 @@
                 <a href="#" class="flex-shrink-0 group block">
                   <div class="flex items-center">
                     <div>
-                      <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" />
+                      <UserCircleIcon class="h-12 " />
+                      <!-- <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" /> -->
                     </div>
                     <div class="ml-3">
-                      <p class="text-base font-medium text-gray-700 group-hover:text-gray-900">
-                        Whitney Francis
-                      </p>
+                    
                       <p class="text-sm font-medium text-gray-500 group-hover:text-gray-700">
                         View profile
                       </p>
@@ -67,7 +66,7 @@
       <div class=""><NuxtLink to="/"><img class="w-20" src="public/logo.png" alt="Workflow" /></NuxtLink></div>
       <ul class="flex-col md:flex-row md:flex space-y-4 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
         <li><NuxtLink to="/" class="text-gray-700 hover:text-blue-500">Home</NuxtLink></li>
-        <li><NuxtLink to="/properties" class="text-gray-700 hover:text-blue-500">Properties</NuxtLink></li>
+        <!-- <li><NuxtLink to="/properties" class="text-gray-700 hover:text-blue-500">Properties</NuxtLink></li> -->
         <li><NuxtLink to="/about" class="text-gray-700 hover:text-blue-500">About</NuxtLink></li>
         <li><NuxtLink to="/career" class="text-gray-700 hover:text-blue-500">Career</NuxtLink></li>
         <li><NuxtLink to="/contact-us" class="text-gray-700 hover:text-blue-500">Contact Us</NuxtLink></li>
@@ -80,7 +79,7 @@
         <div class="lg:hidden">
           <div class="flex items-center justify-between bg-gray-50 border-b border-gray-200 px-4 py-1.5">
             <div>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
+              <img class="h-8 w-auto" src="public/logo.png" alt="Workflow" />
             </div>
             <div>
               <button type="button" class="-mr-3 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900" @click="sidebarOpen = true">
@@ -110,7 +109,7 @@
   
   const navigation = [
     { name: 'Home', href: '#', icon: HomeIcon, current: true },
-    { name: 'Properties', href: '#', icon: CalendarIcon, current: false },
+    // { name: 'Properties', href: '#', icon: CalendarIcon, current: false },
     { name: 'About', href: '#', icon: UserGroupIcon, current: false },
     { name: 'Career', href: '#', icon: MagnifyingGlassCircleIcon, current: false },
     { name: 'Contact Us', href: '#', icon: MagnifyingGlassCircleIcon, current: false },

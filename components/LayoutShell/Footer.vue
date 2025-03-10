@@ -5,7 +5,7 @@
         <div>
           <h3 class="text-xl font-bold mb-4">Contact us</h3>
           <p class="text-gray-400">property.samuelin32@gmail.com</p>
-          <p class="text-gray-400">www.detacoproperty.nc.hu</p>
+          <p class="text-gray-400">https://zameenmantra.vercel.app/</p>
         </div>
   
         <!-- Lists by Category Section -->
@@ -51,7 +51,7 @@
   
       <!-- Copyright Section -->
       <div class="text-center mt-8 border-t border-gray-700 pt-8">
-        <p class="text-gray-400">Copyright | All Rights Reserved. Website Provided by www.mark-design.net</p>
+        <p class="text-gray-400">Copyright | All Rights Reserved. Website Provided by https://zameenmantra.vercel.app/</p>
       </div>
     </footer>
   </template>

@@ -15,7 +15,7 @@
         <div
           v-for="(card, index) in cards"
           :key="index"
-          class="p-4"
+          class="!p-4"
           :style="`flex: 0 0 ${100 / cardsPerRow}%;`"
           v-scroll
         >
@@ -50,10 +50,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
 
 const currentSlide = ref(0);
-const cardsPerRow = 3; // Number of cards visible in one row
+const cardsPerRow = ref(3); // Make it reactive
 const cards = [
   {
     title: "Independent House/Villa",
@@ -69,7 +68,7 @@ const cards = [
   },
   {
     title: "Newly designed Second Floor",
-    description: "Brand new interior, luxurious builder floor available",
+    description: "Brand new interior...",
     price: "$32.00.00,000",
     image: "/p1.jpeg",
   },
@@ -93,14 +92,35 @@ const cards = [
   },
 ];
 
-const totalDots = computed(() => Math.max(cards.length - cardsPerRow + 1, 1));
+const totalDots = computed(() => Math.max(cards.length - cardsPerRow.value + 1, 1));
 
 function goToSlide(index) {
   if (index >= 0 && index < totalDots.value) {
     currentSlide.value = index;
   }
 }
+
+// Function to update the number of cards per row based on screen width
+const updateCardsPerRow = () => {
+  if (window.innerWidth <= 640) {
+    cardsPerRow.value = 1;
+  } else if (window.innerWidth <= 1024) {
+    cardsPerRow.value = 2;
+  } else {
+    cardsPerRow.value = 3;
+  }
+};
+
+onMounted(() => {
+  updateCardsPerRow();
+  window.addEventListener("resize", updateCardsPerRow);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateCardsPerRow);
+});
 </script>
+
 
 <style scoped>
 /* Adjust the carousel for responsiveness */

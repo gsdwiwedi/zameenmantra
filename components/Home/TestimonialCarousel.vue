@@ -16,11 +16,12 @@
     </div>
 
     <!-- Previous and Next Buttons -->
-    <button @click="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 text-white p-3 rounded-full">
-      &lt;
+    <button @click="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-3 !rounded-full">
+      <ChevronLeftIcon class="h-6" />
     </button>
-    <button @click="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 text-white p-3 rounded-full">
-      &gt;
+    <button @click="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-3 rounded-full">
+      <ChevronRightIcon class="h-6" />
+
     </button>
 
     <!-- Dots Navigation -->
@@ -36,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import {UserCircleIcon} from "@heroicons/vue/24/outline"
+import {UserCircleIcon, ChevronLeftIcon, ChevronRightIcon} from "@heroicons/vue/24/outline"
 const currentIndex = ref(0);
 const testimonials = ref([
   {
